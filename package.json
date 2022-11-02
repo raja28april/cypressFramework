@@ -18,9 +18,11 @@
   },
   "homepage": "https://github.com/raja28april/cypressFramework#readme",
   "dependencies": {
-    "cypress": "^10.11.0"
+    "cypress": "^10.11.0",
+    "cypress-xpath": "^2.0.1"
   },
   "devDependencies": {
+    "cypress-real-events": "^1.7.2",
     "typescript": "^4.8.4"
   }
 }
