@@ -19,5 +19,8 @@
   "homepage": "https://github.com/raja28april/cypressFramework#readme",
   "dependencies": {
     "cypress": "^10.11.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.4"
   }
 }
