@@ -8,5 +8,8 @@ module.exports = defineConfig({
     },
   },
   "pageLoadTimeout": 60000,
-  "defaultCommandTimeout": 4000
+  "defaultCommandTimeout": 4000,
+  env: {
+    stage: "stageEnv"
+  }
 });
