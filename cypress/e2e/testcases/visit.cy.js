@@ -1,6 +1,6 @@
 describe('UI element handlings', () => {
     it('visit', () => {
-        cy.visit('/')
+        cy.visit('/textinput')
     });
 
     it('url', () => {
@@ -8,5 +8,16 @@ describe('UI element handlings', () => {
             cy.log(`url is ${url}`);
             expect(url).to.contains("test")
         })
+    });
+
+    it('title validation', () => {
+        cy.title().then(title => {
+            expect(title).to.equal("Text Input");
+        })
+    });
+
+    it('input challenge', () => {
+        cy.get('input#newButtonName').type('Raja')
+        cy.get('#updatingButton').click().should('have.text', 'Raja');
     });
 });
