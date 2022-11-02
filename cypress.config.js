@@ -14,8 +14,8 @@ module.exports = defineConfig({
   env: {
     stage: "stageEnv",
     uitest: "uitestingplayground",
-    demoqa: "https://demoqa.com/",
-    angular: "https://www.globalsqa.com/",
-    theinternet: "https://theinternet.herokuapp.com/"
+    demoqa: "https://demoqa.com",
+    angular: "https://www.globalsqa.com",
+    theinternet: "https://the-internet.herokuapp.com"
   }
 });
