@@ -26,3 +26,7 @@ import '@4tw/cypress-drag-drop';
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('parseXlsx', (inputFile) => {
+    return cy.task('parseXlsx', { filePath: inputFile })
+})
