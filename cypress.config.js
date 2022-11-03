@@ -1,10 +1,13 @@
 const { defineConfig } = require("cypress");
+//verify-downloads
+const { verifyDownloadTasks } = require('cy-verify-downloads');
 
 module.exports = defineConfig({
   e2e: {
     baseUrl: `http://uitestingplayground.com`,
     setupNodeEvents(on, config) {
       // implement node event listeners here
+      on('task', verifyDownloadTasks);
     },
   },
   pageLoadTimeout: 60000,
