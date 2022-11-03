@@ -29,4 +29,10 @@ import '@4tw/cypress-drag-drop';
 
 Cypress.Commands.add('parseXlsx', (inputFile) => {
     return cy.task('parseXlsx', { filePath: inputFile })
+});
+
+Cypress.Commands.add('login', (username, password) => {
+    cy.get('#userName').type('test');
+    cy.get('#password').type('Test1234*');
+    cy.get('#login').click();
 })

@@ -51,3 +51,9 @@ https://www.cypress.io/blog/2019/01/03/stop-using-page-objects-and-start-using-a
 # Reporter
 
 npm i --save-dev cypress-mochawesome-reporter
+
+# excel handling
+
+# mysql handling
+
+reference: https://gist.github.com/fityanos/0a345e9e9de498b6c629f78e6b2835f5

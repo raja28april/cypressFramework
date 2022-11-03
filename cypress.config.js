@@ -6,6 +6,7 @@ const { verifyDownloadTasks } = require('cy-verify-downloads');
 const xlsx = require('node-xlsx').default;
 const fs = require('fs');
 const path = require('path');
+const mysql = require('mysql');
 // Parse a buffer
 // const workSheetsFromBuffer = xlsx.parse(fs.readFileSync(`${__dirname}/myFile.xlsx`));
 // // Parse a file
@@ -17,7 +18,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
       on('task', verifyDownloadTasks);
-
+      //excel
       on("task", {
         parseXlsx({ filePath }) {
           return new Promise((resolve, reject) => {
@@ -28,6 +29,12 @@ module.exports = defineConfig({
               reject(e);
             }
           });
+        }
+      });
+      //sql
+      on("task", {
+        queryDb: query => {
+          return queryTestDb(query, config);
         }
       });
 
@@ -65,3 +72,22 @@ module.exports = defineConfig({
   video: true,
   screenshotOnRunFailure: true
 });
+
+function queryTestDb(query, config) {
+  // creates a new mysql connection using credentials from cypress.json env's
+  const connection = mysql.createConnection(config.env.db);
+  // start connection to db
+  connection.connect();
+  // exec query + disconnect to db as a Promise
+  return new Promise((resolve, reject) => {
+    connection.query(query, (error, results) => {
+      if (error) reject(error);
+      else {
+        connection.end();
+        // console.log(results)
+        return resolve(results);
+      }
+    });
+  });
+}
+

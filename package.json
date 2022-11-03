@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/raja28april/cypressFramework#readme",
   "dependencies": {
+    "@mysql.js/mysql": "^0.8.0",
     "cypress": "^10.11.0",
     "cypress-xpath": "^2.0.1"
   },
