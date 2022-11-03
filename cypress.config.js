@@ -7,6 +7,7 @@ const xlsx = require('node-xlsx').default;
 const fs = require('fs');
 const path = require('path');
 const mysql = require('mysql');
+const faker = require('@faker-js/faker');
 // Parse a buffer
 // const workSheetsFromBuffer = xlsx.parse(fs.readFileSync(`${__dirname}/myFile.xlsx`));
 // // Parse a file
@@ -35,6 +36,21 @@ module.exports = defineConfig({
       on("task", {
         queryDb: query => {
           return queryTestDb(query, config);
+        }
+      });
+      on("task", {
+        freshUser: () => {
+          let user = {
+            // name: faker.name.firstName(),
+            userId: faker.datatype.uuid(),
+            username: faker.internet.userName(),
+            email: faker.internet.email(),
+            avatar: faker.image.avatar(),
+            password: faker.internet.password(),
+            birthdate: faker.date.birthdate(),
+            registeredAt: faker.date.past(),
+          };
+          return user;
         }
       });
 
