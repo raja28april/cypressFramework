@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "cypress open --e2e --browser chrome --env stage=fromclistage",
-    "cypress-run": "cypress run --browser chrome --headed --spec cypress/e2e/testcases/21.tooltip.cy.js"
+    "cypress-run": "cypress run --browser chrome --headed --spec cypress/e2e/testcases/21.tooltip.cy.js",
+    "runner-mobile": "cypress open --e2e --browser chrome --config viewportWidth=100 --env demo=someValue"
   },
   "repository": {
     "type": "git",

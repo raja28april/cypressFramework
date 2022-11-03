@@ -52,6 +52,16 @@ module.exports = defineConfig({
     demoqa: "https://demoqa.com",
     angular: "https://www.globalsqa.com",
     theinternet: "https://the-internet.herokuapp.com",
+    //mysql db
+    db: {
+      host: "localhost",
+      user: "root",
+      password: "",
+      database: "cypress_test"
+    },
+
+    //mobile validation
+    mobileViewportWidthBreakpoint: 400,
   },
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
