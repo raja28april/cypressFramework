@@ -19,11 +19,12 @@ import 'cypress-real-events/support';
 import './exceptions';
 require('cypress-xpath');
 require('cy-verify-downloads').addCustomCommand();
+import 'cypress-mochawesome-reporter/register';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-beforeEach(() => {
+/* beforeEach(() => {
     cy.log('this is before each global block');
     // Cypress.session.clearAllSavedSessions();
     cy.session('mySession', () => {
@@ -33,7 +34,7 @@ beforeEach(() => {
         cy.get('#login').click();
         cy.url().should('contain', 'profile');
     });
-});
+}); */
 
 after(() => {
     Cypress.session.clearAllSavedSessions();
