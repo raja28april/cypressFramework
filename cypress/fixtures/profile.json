@@ -1,5 +1,17 @@
 {
-  "id": 8739,
-  "name": "Jane",
-  "email": "jane@example.com"
+  "users": [
+    {
+      "id": 8739,
+      "name": "Jane",
+      "email": "jane@example.com"
+    },
+    {
+      "id": 87340,
+      "name": "Raja",
+      "email": "raja@example.com"
+    }
+  ],
+  "id": 8741,
+  "name": "Raj123",
+  "email": "raja123@example.com"
 }
