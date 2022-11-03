@@ -41,3 +41,9 @@ npm install --save-dev @testing-library/cypress
 # cypress drag and drop
 
 npm install --save-dev @4tw/cypress-drag-drop
+
+# Why page objects is not recommended in cypress
+
+https://applitools.com/blog/page-objects-app-actions-cypress/
+
+https://www.cypress.io/blog/2019/01/03/stop-using-page-objects-and-start-using-app-actions/
