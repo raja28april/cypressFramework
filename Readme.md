@@ -33,3 +33,7 @@ npm i -D cypress-real-events and follow instructions in npm page to config as pe
 # cypress xpath installation
 
 npm install -D cypress-xpath and follow instructions in npm page to config as per cypress version
+
+# cypress testing library
+
+npm install --save-dev @testing-library/cypress
