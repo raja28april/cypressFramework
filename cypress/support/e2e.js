@@ -22,3 +22,20 @@ require('cy-verify-downloads').addCustomCommand();
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+beforeEach(() => {
+    cy.log('this is before each global block');
+    // Cypress.session.clearAllSavedSessions();
+    cy.session('mySession', () => {
+        cy.visit(`${Cypress.env('demoqa')}/login`);
+        cy.get('#userName').type('test');
+        cy.get('#password').type('Test1234*');
+        cy.get('#login').click();
+        cy.url().should('contain', 'profile');
+    });
+});
+
+after(() => {
+    Cypress.session.clearAllSavedSessions();
+    cy.clearCookies();
+});
