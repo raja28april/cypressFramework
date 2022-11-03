@@ -61,3 +61,7 @@ reference: https://gist.github.com/fityanos/0a345e9e9de498b6c629f78e6b2835f5
 # api fakes
 
 https://jsonplaceholder.typicode.com/
+
+# swagger page sample
+
+https://demoqa.com/swagger/
