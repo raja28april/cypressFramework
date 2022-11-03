@@ -37,3 +37,7 @@ npm install -D cypress-xpath and follow instructions in npm page to config as pe
 # cypress testing library
 
 npm install --save-dev @testing-library/cypress
+
+# cypress drag and drop
+
+npm install --save-dev @4tw/cypress-drag-drop
