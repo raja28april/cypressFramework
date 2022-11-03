@@ -9,6 +9,7 @@ module.exports = defineConfig({
       // implement node event listeners here
       on('task', verifyDownloadTasks);
     },
+    experimentalSessionAndOrigin: true,
   },
   pageLoadTimeout: 60000,
   defaultCommandTimeout: 4000,
@@ -19,6 +20,6 @@ module.exports = defineConfig({
     uitest: "uitestingplayground",
     demoqa: "https://demoqa.com",
     angular: "https://www.globalsqa.com",
-    theinternet: "https://the-internet.herokuapp.com"
-  }
+    theinternet: "https://the-internet.herokuapp.com",
+  },
 });
