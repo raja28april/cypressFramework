@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open --e2e --browser chrome --env stage=fromclistage"
+    "test": "cypress open --e2e --browser chrome --env stage=fromclistage",
+    "cypress-run": "cypress run --browser firefox --headed --spec cypress/e2e/testcases/29-sharing-an-array-of-objects.cy.js"
   },
   "repository": {
     "type": "git",
