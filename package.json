@@ -6,7 +6,8 @@
   "scripts": {
     "test": "cypress open --e2e --browser chrome --env stage=fromclistage",
     "cypress-run": "cypress run --browser chrome --headed --spec cypress/e2e/testcases/21.tooltip.cy.js",
-    "runner-mobile": "cypress open --e2e --browser chrome --config viewportWidth=100 --env demo=someValue"
+    "runner-mobile": "cypress open --e2e --browser chrome --config viewportWidth=100 --env demo=someValue",
+    "cypress-dashboard-parallel": "cypress run --record --key 94abf18e-7fa6-4292-bdf0-11a0e8d16c71 --parallel --spec cypress/e2e/parallel-test/*.ts --browser chrome"
   },
   "repository": {
     "type": "git",
