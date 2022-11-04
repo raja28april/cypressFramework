@@ -65,3 +65,36 @@ https://jsonplaceholder.typicode.com/
 # swagger page sample
 
 https://demoqa.com/swagger/
+
+# Cypress + WebKit!
+
+Check this repo with a functional demo (and more information): Cypress + WebKit Repository
+
+What is WebKit?
+
+WebKit is the web browser engine used by Safari, Mail, App Store, and many other apps on macOS, iOS, and Linux. Get started contributing code, or reporting bugs.
+
+Cypress is implementing a playwright-webkit library to add this browser coverage.
+
+How to install and use it?
+
+1. Add in the configuration file(cypress.config.js/ts): experimentalWebKitSupport: true
+
+2. Install the webkit dependency: npm install --save-dev playwright-webkit
+
+3. Open your terminal and open the test runner. You can see the new browser available.
+
+4. You can send as well the browser parameter as: "--browser webkit"
+
+You can access the latest changes in the last release.
+
+Note:
+
+WebKit support is experimental, so you may encounter issues. If you encounter an issue not on the "Known Issues" list, please open an issue on the GitHub repository.
+
+UPDATE -> Reported at ISSUE, and here you have a full report:
+
+flotwig commented 1 hour ago
+Hi @JoanEsquivel, this is because experimentalSessionAndOrigin is not currently compatible with experimentalWebKitSupport: We are working on it: #23799
+
+However, this user experience is not intended. You should get a cleaner error. I'll keep this issue open to track cleaning up this error.
