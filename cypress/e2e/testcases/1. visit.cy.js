@@ -4,7 +4,7 @@ describe('UI element handlings', () => {
     });
 
     it('url', () => {
-        cy.url().then(url => {
+        cy.url().then(url => {//because most methods in cypress yields doesn't return
             cy.log(`url is ${url}`);
             expect(url).to.contains("test")
         })
