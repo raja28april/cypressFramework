@@ -22,6 +22,8 @@ describe.only('Typing in an iframe - the internet app', () => {
     it('Iframe demo', () => {
         cy.get('#mce_0_ifr').then(iframe => {
             const $body = iframe.contents().find('body');
+            let bod = cy.wrap($body);
+            cy.log(bod);
             cy.wrap($body).find('p').type(`{selectAll}Hello world!`);
             cy.wrap($body).find('p').should('have.text', 'Hello world!');
         })

@@ -62,6 +62,7 @@ module.exports = defineConfig({
   defaultCommandTimeout: 4000,
   viewportHeight: 1000,
   viewportWidth: 1400,
+  chromeWebSecurity: false,
   env: {
     stage: "stageEnv",
     uitest: "uitestingplayground",

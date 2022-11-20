@@ -98,3 +98,7 @@ flotwig commented 1 hour ago
 Hi @JoanEsquivel, this is because experimentalSessionAndOrigin is not currently compatible with experimentalWebKitSupport: We are working on it: #23799
 
 However, this user experience is not intended. You should get a cleaner error. I'll keep this issue open to track cleaning up this error.
+
+# References
+
+https://github.com/cypress-io/cypress-example-recipes/issues/410 --> alert handling in frames

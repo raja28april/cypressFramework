@@ -36,7 +36,7 @@ import 'cypress-mochawesome-reporter/register';
     });
 }); */
 
-after(() => {
-    Cypress.session.clearAllSavedSessions();
-    cy.clearCookies();
-});
+// after(() => {
+//     Cypress.session.clearAllSavedSessions();
+//     cy.clearCookies();
+// });
