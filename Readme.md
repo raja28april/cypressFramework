@@ -102,3 +102,29 @@ However, this user experience is not intended. You should get a cleaner error. I
 # References
 
 https://github.com/cypress-io/cypress-example-recipes/issues/410 --> alert handling in frames
+
+# Issues faced and handled
+
+## 503 unavailable when used cy.visit() 
+use failOnStatusCode: false as below
+cy.visit('url',{failOnStatusCode: false})
+
+## how to remove unwanted xhr and fetch calls
+add hideXHRInCommandLog: true, in cypress.config.js inside e2e object
+and add below lines in support --> e2e.js
+$$$$ To Hide fetch/XHR requests from command log$$$$$
+if (Cypress.config("hideXHRInCommandLog")) {
+    const app = window.top;
+
+    if (
+        app &&
+        !app.document.head.querySelector("[data-hide-command-log-request]")
+    ) {
+        const style = app.document.createElement("style");
+        style.innerHTML =
+            ".command-name-request, .command-name-xhr { display: none }";
+        style.setAttribute("data-hide-command-log-request", "");
+
+        app.document.head.appendChild(style);
+    }
+}
